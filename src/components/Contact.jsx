@@ -82,7 +82,7 @@ const Contact = () => {
                 />
               </div>
               <div className="flex justify-center items-center px-4">
-                <Button submit={"submit"} type={2} title={"Send message"} />
+                <Button type={"4"} title={"Send message"} />
               </div>
             </form>
           ) : (
