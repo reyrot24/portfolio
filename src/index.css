@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --softer-brown: #7C5835;
+    --soft-brown: #66442C;
+    --brown: #4C2b21;
+    --dark-brown: #2E1915;
+    --darker-brown: #0F080E;
+    --black: #000000;
+    --white: #FFFFFF;
+    --font-playfair: 'Playfair Display', sans-serif;
+    --font-playfair-sc: 'Playfair Display SC', sans-serif;
+}
+
+
+
+@layer base{
+    html{
+        scroll-behavior: smooth;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: var(--black);
+    }
+
+    body{
+        font-family: var(--font-playfair);
+    }
+    section{
+      scroll-margin-top: 100px;
+    }
+}
+
+.menu li:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  
+  .menu li:hover::after {
+    width: 70%;
+    height: 2px;
+    background-color: var(--soft-brown);
+  }
+
+  
+.gradient-instagram:hover{
+    color: white;
+    background: linear-gradient(194deg, rgba(79,91,213,1) 22%, rgba(150,47,191,1) 42%, rgba(214,41,118,1) 59%, rgba(250,126,30,1) 75%, rgba(254,218,117,1) 92%);
+}
+
+@media only screen and (max-width: 500px) {
+    .icons-width{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .icons-width{
+        font-size: 2.25rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .icons-width{
+        font-size: 3rem;
+    }
+}
+
+
+
+
+.animate-text{
+    background-image: linear-gradient(
+    145deg,
+    var(--dark-brown) 0%,
+    var(--brown) 20%,
+    var(--softer-brown) 40%,
+    var(--brown) 50%,
+    var(--softer-brown) 60%,
+    var(--brown) 90%,
+    var(--dark-brown) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip1 7s linear infinite;
+}
+
+
+.animate-line{
+    background-image: linear-gradient(
+    145deg,
+    var(--dark-brown) 0%,
+    var(--brown) 20%,
+    var(--softer-brown) 40%,
+    var(--brown) 50%,
+    var(--softer-brown) 60%,
+    var(--brown) 90%,
+    var(--dark-brown) 100%
+  );
+  background-size: auto auto;
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  animation: textclip1 7s linear infinite;
+}
+
+.gold-text{
+    background-image: linear-gradient(
+    145deg,
+    var(--brown) 0%,
+    var(--softer-brown) 40%,
+    var(--brown) 50%,
+    var(--softer-brown) 60%,
+    var(--brown) 90%,
+    var(--dark-brown) 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip1 17s linear infinite;
+}
+
+@keyframes textclip1 {
+    to{
+        background-position: -200% 100%;
+    }
+}
+
+@keyframes textclip {
+    0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+}
+
+.animate-bg:hover{
+    background-image: repeating-linear-gradient(
+    145deg,
+    var(--dark-brown) 0%,
+    var(--brown) 20%,
+    var(--softer-brown) 40%,
+    var(--brown) 50%,
+    var(--softer-brown) 60%,
+    var(--brown) 90%,
+    var(--dark-brown) 100%
+  );
+  background-size: 200% 200%;
+  animation: textclip 9s linear infinite;
+}
+
+.animate-bg{
+    background-image: repeating-linear-gradient(
+    145deg,
+    var(--dark-brown) 0%,
+    var(--brown) 20%,
+    var(--softer-brown) 40%,
+    var(--brown) 50%,
+    var(--softer-brown) 60%,
+    var(--brown) 90%,
+    var(--dark-brown) 100%
+
+  );
+  background-size: 200% 200%;
+}
+
+
+
+
+
