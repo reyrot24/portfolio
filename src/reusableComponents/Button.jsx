@@ -28,9 +28,7 @@ function Button({ title, type }) {
   } else {
     return (
       <div className="cursor-pointer border border-softBrown animate-text w-full lg:w-56 m-2 button text-center hover:border-softerBrown/60 hover:shadow hover:shadow-softBrown duration-300 rounded">
-        <button type="submit">
-          <a href="#contact">{title}</a>
-        </button>
+        <button type="submit">{title}</button>
       </div>
     );
   }

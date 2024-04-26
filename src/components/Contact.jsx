@@ -20,14 +20,7 @@ const Contact = () => {
         form.current,
         import.meta.env.VITE_EMAIL_PUBLIC_KEY
       )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+      .catch((error) => console.log(error));
     handleSubmit();
   };
 
@@ -58,6 +51,7 @@ const Contact = () => {
                   className="p-2 outline-none sm:p-4 text-base rounded-lg ease-in-out duration-300 opacity-95 hover:opacity-100 hover:shadow-lg hover:shadow-white bg-white"
                   type="text"
                   name="user_name"
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -69,6 +63,7 @@ const Contact = () => {
                   className="p-2 outline-none sm:p-4 text-base rounded-lg ease-in-out duration-300 opacity-95 hover:opacity-100 hover:shadow-lg hover:shadow-white bg-white"
                   type="email"
                   name="user_email"
+                  required
                 />
               </div>
               <div className="flex flex-col gap-2">
@@ -79,6 +74,7 @@ const Contact = () => {
                   className="w-full outline-none h-20 p-2 sm:p-3 text-base sm:h-[7rem] rounded-lg ease-in-out duration-300 opacity-95 hover:opacity-100 hover:shadow-lg hover:shadow-white bg-white"
                   placeholder="Your message"
                   name="message"
+                  required
                 />
               </div>
               <div className="flex justify-center items-center px-4">
